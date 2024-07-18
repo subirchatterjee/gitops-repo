@@ -7,7 +7,7 @@
  namespace:
    name: 5-demo
  labels:
+  app:
    name: block-buster
    version: 7.5.0
    env: dev
-   app: web
