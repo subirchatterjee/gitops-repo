@@ -8,4 +8,6 @@ spec:
   interval: 1m0s
   ref:
     branch: 8-demo
-  url: https://github.com/jagdishmodi/bb-app-source.git
+  secretRef:
+    name: 8-demo-git-bb-app-auth
+  url: ssh://git@github.com/jagdishmodi/bb-app-source.git
