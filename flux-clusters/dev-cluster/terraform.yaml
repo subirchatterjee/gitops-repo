@@ -7,7 +7,7 @@ spec:
   interval: 1m
   approvePlan: auto
   destroyResourcesOnDeletion: true
-  path: ./terraform/azure/storage-account
+  path: /home/trainer/gitops-repo/flux-clusters/dev-cluster/terraform/azure/storage-account
   sourceRef:
     kind: GitRepository
     name: flux-system
