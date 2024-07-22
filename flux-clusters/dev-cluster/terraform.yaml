@@ -11,3 +11,27 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  runnerPodTemplate:
+    spec:
+      image: docker.io/vimuchiaroni/tf-az-cli:1.0
+      env:
+        - name: ARM_SUBSCRIPTION_ID
+          valueFrom:
+            secretKeyRef:
+              name: azure-auth
+              key: ARM_SUBSCRIPTION_ID
+        - name: ARM_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: azure-auth
+              key: AZURE_CLIENT_ID
+        - name: ARM_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: azure-auth
+              key: AZURE_CLIENT_SECRET
+        - name: ARM_TENANT_ID
+          valueFrom:
+            secretKeyRef:
+              name: azure-auth
+              key: AZURE_TENANT_ID
